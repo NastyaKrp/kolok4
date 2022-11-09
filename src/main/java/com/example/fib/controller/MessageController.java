@@ -13,7 +13,8 @@ import java.util.Map;
 
 
 public class MessageController {
-    private int counter = 0;
+    private int counter = 10;
+    private  int i = 0;
     private ArrayList<Integer> fib = new ArrayList<Integer>();
 
    /* private MessageController(int n)
@@ -36,8 +37,11 @@ public class MessageController {
     {{
         fib.add(0);
         fib.add(1);
-        add(new HashMap<String, Integer>(){{put("id", 1); put("Number", fib.get(0)); }});
-        add(new HashMap<String, Integer>(){{put("id", 2); put("Second", fib.get(1)); }});
+        Sol(counter);
+        for(i = 0; i < counter; i++)
+        {
+            add(new HashMap<String, Integer>(){{put("id", i + 1); put("Number", fib.get(i)); }});
+        }
     }};
 
     @GetMapping
